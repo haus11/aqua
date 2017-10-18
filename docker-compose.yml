@@ -5,3 +5,5 @@ services:
     build: .
     ports:
     - "3030:8081"
+    environment:
+     - NODE_ENV=production
