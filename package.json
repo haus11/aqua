@@ -1,0 +1,28 @@
+{
+  "name": "aqua.haus11.org",
+  "version": "1.0.0",
+  "description": "Statuspage of the Café Aqua",
+  "author": "server@haus11.org",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haus11/aqua.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haus11/aqua/issues"
+  },
+  "homepage": "https://github.com/haus11/aqua#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "install": "^0.10.1",
+    "npm": "^5.5.1",
+    "request": "^2.83.0"
+  }
+}

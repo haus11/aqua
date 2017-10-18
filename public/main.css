@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+          color: #333;
+  box-sizing: border-box;
+}
+header { 
+    text-align: center; 
+}
+
+.logo {
+    max-width: 400px;
+    width: 100%;
+}
+
+.status-label {
+    font-size: 34px;
+    letter-spacing: 2px;
+    margin: 15px 0;
+}
+
+.status-label.open {
+    color: #4caf50;
+}       
+
+.status-label.closed {
+    color: #f44336;
+}
+
+.status-label.unknown {
+    color: #777;
+}
+
+.more-info {
+    text-align: center;
+    padding: 0px 15px;
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0px 0px 20px;
+    font-size: 16px;
+    border-left: 5px solid #EEE;
+    text-align: left;
+    display: inline-block;  
+}
+
+blockquote footer {
+    display: block;
+    font-size: 75%;
+    color: #777;        
+}
+
+blockquote footer:before {
+    content: "— ";      
+}
+
+aside { 
+    padding: 0 8px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media only screen and (min-width: 480px) {
+    .status-label {
+        font-size: 48px;
+    }
+}
