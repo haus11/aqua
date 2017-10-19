@@ -5,7 +5,7 @@ const AQUA_STATUS_ENDPOINT = "http://193.174.232.89:8080/fheapp/api/fhe/aqua";
 
 module.exports = () => {
     return new Promise((resolve, reject) => {
-        request({url: AQUA_STATUS_ENDPOINT}, function (error, response, body) {
+        request({url: AQUA_STATUS_ENDPOINT}, (error, response, body) => {
             if (error) {
                 reject(error);
             } else if (response && response.statusCode <= 399) {
@@ -17,8 +17,7 @@ module.exports = () => {
                     } else {
                         reject(new Error(`Aqua status endpoint returned unknown response body: ${body}`));
                     }
-                }
-                catch(e) {
+                } catch (e) {
                     reject(e);
                 }
             } else {

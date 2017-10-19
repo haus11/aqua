@@ -1,16 +1,20 @@
 'use strict';
 
 const express = require('express');
-const exphbs  = require('express-handlebars');
-const app = express();
+const expressHandlebars = require('express-handlebars');
+const compression = require('compression');
 
+const app = express();
 const isAquaOpen = require('./isAquaOpen');
 
 // Constants
 const PORT = 8081;
 const HOST = '0.0.0.0';
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+//Enable gzip
+app.use(compression());
+
+app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 app.use('/static', express.static('public'));
