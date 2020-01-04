@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/haus11/aqua#readme",
   "dependencies": {
-    "compression": "^1.7.1",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "install": "^0.10.1",
