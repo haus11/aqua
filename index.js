@@ -1,23 +1,30 @@
 'use strict';
 
+const path = require('path');
 const express = require('express');
-const expressHandlebars = require('express-handlebars');
+const exphbs = require('express-handlebars');
 const compression = require('compression');
 
 const app = express();
 const isAquaOpen = require('./isAquaOpen');
 
 // Constants
-const PORT = 8081;
+const PORT = 1025;
 const HOST = '0.0.0.0';
 
 //Enable gzip
 app.use(compression());
 
-app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
+app.engine('.hbs', exphbs({
+    extname: '.hbs',
+    defaultLayout: 'main',
+    partialsDir: path.join(__dirname, 'views/partials'),
+    layoutsDir: path.join(__dirname, 'views/layouts')
+  }));
+app.set('view engine', '.hbs');
+app.set('views',path.join(__dirname,'views'))
 
-app.use('/static', express.static('public'));
+app.use('/static', express.static(`${__dirname}/public`));
 
 app.get('/', (req, res) => {
     isAquaOpen()
